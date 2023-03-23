@@ -1,0 +1,151 @@
+@import "./variables.scss";
+
+@font-face {
+  font-family: "myFontBold";
+  src: url("./AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+  font-family: "myFont";
+  src: url("./AvenirNextLTPro-Regular.otf");
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.logo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.center{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+   #signInEmail{
+    margin-right: 1rem;
+   }
+
+    .form{
+
+        width: 500px;
+       
+
+        h2{
+            font-family: "myFontBold";
+            font-size: 40px;
+            color: #213f7d;
+            font-weight: bolder;
+          }
+      
+          p{
+            color: #545f7d;
+            padding: 10px 0;
+            font-family: "myFont";
+            font-size: 20px;
+            margin-bottom: 1.2rem;
+          }
+
+          input {
+            width: 100%;
+            height: 50px;
+            // background: linear-gradient(0deg, rgba(84, 95, 125, 0.15), rgba(84, 95, 125, 0.15)),
+            // linear-gradient(0deg, #FFFFFF, #FFFFFF);
+            border: 2px solid #545f7d26;
+            border-radius: 5px;
+            margin: 15px 0;
+            padding-left: 20px;
+          }
+
+          #show-password {
+            position: relative;
+            margin-left: -55px;
+            cursor: pointer;
+            font-size: 12px;
+            font-family: "myFontBold";
+            z-index: 1;
+            color: #39cdcc;
+          }
+      
+          h4 {
+            color: #39cdcc;
+            font-size: 12px;
+            font-family: "myFontBold";
+            padding: 10px 0;
+          }
+      
+          button {
+            width: 100%;
+            height: 50px;
+            border-radius: 8px;
+            background-color: #39cdcc;
+            color: #fff;
+            border: none;
+            margin-top: 1rem;
+          }
+    }
+}
+
+// media queries
+
+// Define styles for screens smaller than 576px (extra small devices)
+@media (max-width: $breakpoint-sm) {
+    // Example styles:
+    .center{
+        display: block;
+        width: 80%;
+
+        #signInImg{
+            display: none
+        }
+
+        .form{
+            width: 100%;
+        }
+    }
+  }
+  
+  // Define styles for screens between 576px and 767px (small devices)
+  @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+    // Example styles:
+    .center{
+        display: block;
+        width: 80%;
+
+        #signInImg{
+            display: none
+        }
+
+        .form{
+            width: 100%;
+        }
+    }
+  }
+  
+  // Define styles for screens between 768px and 991px (medium devices)
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+    // Example styles:
+    
+  }
+  
+  // Define styles for screens between 992px and 1199px (large devices)
+  @media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
+    // Example styles:
+    
+  }
+  
+  // Define styles for screens larger than or equal to 1200px (extra large devices)
+  @media (min-width: $breakpoint-xl) {
+    // Example styles:
+   
+  }
