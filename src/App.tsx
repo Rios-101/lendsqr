@@ -1,11 +1,12 @@
 
 import '../src/styles/app.scss';
-import LogIn from './component/LogIn';
+
+import User from './component/User';
 
 function App() {
   return (
     <div>
-      <LogIn/>
+      <User/>
     </div>
   );
 }
