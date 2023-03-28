@@ -1,0 +1,277 @@
+@import "./variables.scss";
+
+@font-face {
+  font-family: "myFontBold";
+  src: url("./AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+  font-family: "myFont";
+  src: url("./AvenirNextLTPro-Regular.otf");
+}
+
+.backIcon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+
+  p {
+    color: #545f7d;
+    font-size: 16px;
+  }
+}
+
+.statusBtnFlex {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .statusBtn {
+    background-color: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-family: "myFontBold";
+  }
+
+  .blocked {
+    color: #e4033b;
+    border-color: #e4033b;
+    margin-right: 15px;
+  }
+
+  .active {
+    color: #39cdcc;
+    border-color: #39cdcc;
+  }
+}
+
+.userHeader {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 2rem 0;
+  .userHeaderTop {
+    display: flex;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+    align-items: center;
+
+    .userHeaderProf {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      h4 {
+        padding: 0.5rem 0;
+        color: #213f7d;
+        font-size: 22px;
+      }
+
+      .userHeaderImg {
+       
+        padding: .7rem;
+        border-radius: 50%;
+
+        .userHeaderImgR{
+          border-radius: 50%;
+        }
+      }
+
+      .userHeaderProfP {
+        font-size: 14px;
+      }
+    }
+
+    .userHeaderB {
+      border-left: 2px solid #545f7d;
+      border-right: 2px solid #545f7d;
+      padding: 0 1rem;
+
+      .userHeaderP {
+        color: #545f7d;
+        padding-bottom: 0.7rem;
+        font-size: 14px;
+      }
+    }
+
+    .userHeaderA {
+      h4 {
+        font-size: 22px;
+        color: #213f7d;
+        padding: 0.5rem 0;
+      }
+
+      p {
+        font-size: 12px;
+        color: #213f7d;
+      }
+    }
+  }
+
+  .userHeaderBottom {
+    display: flex;
+    justify-content: space-around;
+
+    p {
+      padding: 0 12px 15px;
+      cursor: pointer;
+      color: #39cdcc;
+    }
+
+    p:hover {
+      border-bottom: 1px solid #39cdcc;
+    }
+  }
+}
+
+.userBody {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 2rem 0;
+  padding: 1rem;
+
+  h3 {
+    color: #213f7d;
+    font-size: 16px;
+    padding: 1rem 0;
+  }
+
+  .userBodyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(84, 95, 125, 0.7);
+    padding-bottom: 1.5rem;
+    p {
+      color: #545f7d;
+      font-size: 12px;
+    }
+
+    h4 {
+      font-size: 14px;
+      color: #545f7d;
+    }
+  }
+
+  .userBodyGridEdu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(84, 95, 125, 0.7);
+
+    padding-bottom: 1.5rem;
+    p {
+      color: #545f7d;
+      font-size: 12px;
+    }
+
+    h4 {
+      font-size: 14px;
+      color: #545f7d;
+    }
+  }
+
+  .userBodyGridSoc{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(84, 95, 125, 0.7);
+
+    padding-bottom: 1.5rem;
+    p {
+      color: #545f7d;
+      font-size: 12px;
+    }
+
+    h4 {
+      font-size: 14px;
+      color: #545f7d;
+    }
+  }
+
+  .userBodyGridGuarantor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding-top: 2rem;
+
+    padding-bottom: 1.5rem;
+    p {
+      color: #545f7d;
+      font-size: 12px;
+    }
+
+    h4 {
+      font-size: 14px;
+      color: #545f7d;
+    }
+  }
+}
+
+
+// media queries
+
+// Define styles for screens smaller than 576px (extra small devices)
+@media (max-width: $breakpoint-sm) {
+  // Example styles:
+  .statusBtn{
+    display: none;
+  }
+
+  .userHeaderB, .userHeaderA{
+    display: none;
+  }
+
+  .userHeader .userHeaderBottom {
+    display: none;
+  }
+
+  .userBody .userBodyGrid {
+    grid-template-columns: 1fr ;
+  }
+
+  .userBody .userBodyGridEdu {
+    grid-template-columns: 1fr ;
+  }
+
+  .userBody .userBodyGridSoc {
+    grid-template-columns: 1fr ;
+  }
+
+  .userBody .userBodyGridGuarantor {
+    grid-template-columns: 1fr ;
+  }
+  
+}
+
+// Define styles for screens between 576px and 767px (small devices)
+@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+  // Example styles:
+  .statusBtn{
+    display: none;
+  }
+
+  .userHeaderB, .userHeaderA{
+    display: none;
+  }
+
+  .userHeader .userHeaderBottom {
+    display: none;
+  }
+
+  .userBody .userBodyGrid {
+    grid-template-columns: 1fr ;
+  }
+
+  .userBody .userBodyGridEdu {
+    grid-template-columns: 1fr ;
+  }
+
+  .userBody .userBodyGridSoc {
+    grid-template-columns: 1fr ;
+  }
+
+  .userBody .userBodyGridGuarantor {
+    grid-template-columns: 1fr ;
+  }
+  
+}

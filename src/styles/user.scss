@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 @font-face {
     font-family: "myFontBold";
     src: url("./AvenirNextLTPro-Bold.otf");
@@ -34,6 +36,7 @@
             display: flex;
             gap: 10px;
             align-items: center;
+            padding: 0;
         }
 
 
@@ -70,6 +73,12 @@
                 font-size: 20px;
             }
 
+            
+
+        }
+
+        .menu{
+            display: none;
         }
 
 
@@ -98,6 +107,7 @@
         width: 19%;
         padding: 1rem 0;
         box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        padding-bottom: 2rem;
         
         .switchOrg{
             display: flex;
@@ -130,9 +140,19 @@
 
         }
 
+        .active{
+            background-color: rgba(57, 205, 204, 0.06);
+            border-left: 2px solid #39CDCC; 
+        }
+
         .link:hover{
             background-color: rgba(57, 205, 204, 0.06);
             border-left: 2px solid #39CDCC; 
+        }
+
+        .lastNav{
+            border-bottom: 1px solid rgba(84, 95, 125, 0.7);
+            padding-bottom:3rem
         }
     }
 
@@ -230,5 +250,221 @@
 }
 
 
+// media queries
+
+// Define styles for screens smaller than 576px (extra small devices)
+@media (max-width: $breakpoint-sm) {
+   
+    .navTop{
+        display: block;
+
+        .logo{
+            justify-content: center;
+            padding-bottom: 1rem;
+        }
+
+        .search{
+            justify-content: center;
+        }
+
+        .menu{
+            display: block;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .profile{
+            display: none;
+        }
+
+    }
+
+    .navSide .side{
+        display: none;
+    }
+
+    .navSide .sideShow{
+        width: 100%;
+        padding: 1rem 0;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        padding-bottom: 2rem;
+        
+        .switchOrg{
+            display: flex;
+            gap: .8rem;
+            padding: 1rem 2rem;
+            color: #213F7D;
+            cursor: pointer;
+        }
+
+        .dashboard{
+            display: flex;
+            gap: .8rem;
+            color: grey;
+            padding: 2rem 2rem;
+            cursor: pointer;
+        }
+
+        .cus{
+            font-size: 12px;
+            padding: .7rem 2rem;
+        }
+
+
+        .link{
+                display: flex;
+                gap: 1rem;
+                padding: 1rem 2rem;            
+                color: grey;
+                cursor: pointer;
+
+        }
+
+        .active{
+            background-color: rgba(57, 205, 204, 0.06);
+            border-left: 2px solid #39CDCC; 
+        }
+
+        .link:hover{
+            background-color: rgba(57, 205, 204, 0.06);
+            border-left: 2px solid #39CDCC; 
+        }
+
+        .lastNav{
+            border-bottom: 1px solid rgba(84, 95, 125, 0.7);
+            padding-bottom:3rem
+        }
+    }
+
+
+    .navSide .main {
+        width: 100%;
+    }
+
+    .navSide .mainhide{
+        display: none;
+    }
+
+    .navSide .main .container .cardGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tablePhone{
+        width: 100%;
+        overflow-x: auto;
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+    }
+  }
   
+  // Define styles for screens between 576px and 767px (small devices)
+  @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+    // Example styles:
+    .navTop{
+        display: block;
+
+        .logo{
+            justify-content: center;
+            padding-bottom: 1rem;
+        }
+
+        .search{
+            justify-content: center;
+        }
+
+        .menu{
+            display: block;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .profile{
+            display: none;
+        }
+
+    }
+
+    .navSide .side{
+        display: none;
+    }
+
+    .navSide .sideShow{
+        width: 100%;
+        padding: 1rem 0;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        padding-bottom: 2rem;
+        
+        .switchOrg{
+            display: flex;
+            gap: .8rem;
+            padding: 1rem 2rem;
+            color: #213F7D;
+            cursor: pointer;
+        }
+
+        .dashboard{
+            display: flex;
+            gap: .8rem;
+            color: grey;
+            padding: 2rem 2rem;
+            cursor: pointer;
+        }
+
+        .cus{
+            font-size: 12px;
+            padding: .7rem 2rem;
+        }
+
+
+        .link{
+                display: flex;
+                gap: 1rem;
+                padding: 1rem 2rem;            
+                color: grey;
+                cursor: pointer;
+
+        }
+
+        .active{
+            background-color: rgba(57, 205, 204, 0.06);
+            border-left: 2px solid #39CDCC; 
+        }
+
+        .link:hover{
+            background-color: rgba(57, 205, 204, 0.06);
+            border-left: 2px solid #39CDCC; 
+        }
+
+        .lastNav{
+            border-bottom: 1px solid rgba(84, 95, 125, 0.7);
+            padding-bottom:3rem
+        }
+    }
+
+
+    .navSide .main {
+        width: 100%;
+    }
+
+    .navSide .mainhide{
+        display: none;
+    }
+
+    .navSide .main .container .cardGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tablePhone{
+        width: 100%;
+        overflow-x: auto;
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+    }
+  }
   

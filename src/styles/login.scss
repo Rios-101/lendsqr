@@ -77,11 +77,19 @@
             color: #39cdcc;
           }
       
+          .forgotP{
+            cursor: pointer;
+          }
+
           h4 {
             color: #39cdcc;
             font-size: 12px;
             font-family: "myFontBold";
             padding: 10px 0;
+          }
+
+          .login{
+            cursor: pointer;
           }
       
           button {
